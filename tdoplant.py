@@ -12,7 +12,7 @@ import matplotlib.dates as mdates
 import pandas as pd
 import sys
 
-print "De TDO plant aan z'n wortels aan het sjorren..."
+print "De plant aan z'n wortels aan het sjorren..."
 # ff lekker iets instellen
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -131,7 +131,7 @@ formatter = DateFormatter('%d-%m %H:%M')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.title('Lichtsterkte')
 plt.gcf().autofmt_xdate()
-plt.savefig("/var/www/html/admin/tdoplant/plotlicht.png")
+plt.savefig("/var/www/html/admin/plant/plotlicht.png")
 
         # temp
 plt.clf()
@@ -147,7 +147,7 @@ formatter = DateFormatter('%d-%m %H:%M')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.title('Temperatuur')
 plt.gcf().autofmt_xdate()
-plt.savefig("/var/www/html/admin/tdoplant/plottemp.png")
+plt.savefig("/var/www/html/admin/plant/plottemp.png")
 
         # voeding
 plt.clf()
@@ -163,7 +163,7 @@ formatter = DateFormatter('%d-%m %H:%M')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.title('Voeding')
 plt.gcf().autofmt_xdate()
-plt.savefig("/var/www/html/admin/tdoplant/plotvoeding.png")
+plt.savefig("/var/www/html/admin/plant/plotvoeding.png")
 
         # vocht
 plt.clf()
@@ -179,18 +179,18 @@ formatter = DateFormatter('%d-%m %H:%M')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.title('Water')
 plt.gcf().autofmt_xdate()
-plt.savefig("/var/www/html/admin/tdoplant/plotvocht.png")
+plt.savefig("/var/www/html/admin/plant/plotvocht.png")
 
 # ff lekker een html'etje opbouwen van het resultaat
-text_file = open("/var/www/html/admin/tdoplant/tdoplant.html", "w")
+text_file = open("/var/www/html/admin/plant/plant.html", "w")
 text_file.write("<html>")
 text_file.write("<head>")
-text_file.write("<title>TDO plant stats!!!11</title>")
+text_file.write("<title>Plant stats!!!11</title>")
 text_file.write("<meta http-equiv=\"refresh\" content=\"10\">")
 text_file.write("</head>")
 text_file.write("<body>")
 text_file.write("<basefont face='Verdana' size='2'")
-text_file.write("<p><h1>TDO plant stats!!!11</h1></p>")
+text_file.write("<p><h1>plant stats!!!11</h1></p>")
 text_file.write("<p><img src='images/"+ moist +"'>  <img src='images/"+ condu +"'> <img src='images/"+ temp +"'> <img src='images/"+ licht +"'></p>")
 text_file.write("<p><h2>Ruwe data</font></h2></p>")
 text_file.write("Temperatuur: " +  str(miTemp) + " graden")
